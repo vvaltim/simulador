@@ -2,7 +2,7 @@
     'use strict';
   
     angular.module('BlurAdmin.pages.initialPetition')
-        .controller('InitialPetitionCtrl', PostCaseCtrl);
+        .controller('InitialPetitionCtrl', InitialPetitionCtrl);
   
     /** @ngInject */
     function InitialPetitionCtrl($scope) {

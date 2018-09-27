@@ -2,7 +2,7 @@
     'use strict';
   
     angular.module('BlurAdmin.pages.conciliationHearing')
-        .controller('ConciliationHearingCtrl', PostCaseCtrl);
+        .controller('ConciliationHearingCtrl', ConciliationHearingCtrl);
   
     /** @ngInject */
     function ConciliationHearingCtrl($scope) {

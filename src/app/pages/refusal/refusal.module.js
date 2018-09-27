@@ -14,6 +14,7 @@
           .state('refusal', {
             url: '/refusal',
             templateUrl: 'app/pages/refusal/refusal.html',
+            controller: 'RefusalCtrl',
             // template: '<ui-view autoscroll="true" autoscroll-body-top></ui-view>',
             // abstract: true,
             title: 'Indeferimento',

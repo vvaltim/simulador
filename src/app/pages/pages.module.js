@@ -9,17 +9,21 @@
     'ui.router',
 
     'BlurAdmin.pages.dashboard',
-    'BlurAdmin.pages.ui',
+    // 'BlurAdmin.pages.ui',
     // 'BlurAdmin.pages.components',
-    'BlurAdmin.pages.form',
-    'BlurAdmin.pages.tables',
+    // 'BlurAdmin.pages.form',
+    // 'BlurAdmin.pages.tables',
     // 'BlurAdmin.pages.charts',
     // 'BlurAdmin.pages.maps',
-    'BlurAdmin.pages.profile',
+    // 'BlurAdmin.pages.profile',
     'BlurAdmin.pages.postCase',
+    'BlurAdmin.pages.exerciseCorrection',
+    'BlurAdmin.pages.sentence',
     'BlurAdmin.pages.initialPetition',
     'BlurAdmin.pages.refusal',
     'BlurAdmin.pages.conciliationHearing',
+    'BlurAdmin.pages.contestation',
+    // 'BlurAdmin.pages.sanitationProcess',
   ])
       .config(routeConfig);
 

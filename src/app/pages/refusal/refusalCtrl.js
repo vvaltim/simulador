@@ -2,7 +2,7 @@
     'use strict';
   
     angular.module('BlurAdmin.pages.initialPetition')
-        .controller('RefusalCtrl', PostCaseCtrl);
+        .controller('RefusalCtrl', RefusalCtrl);
   
     /** @ngInject */
     function RefusalCtrl($scope) {
@@ -16,7 +16,7 @@
     //     return vm.personalInfo.confirmPassword && vm.personalInfo.password == vm.personalInfo.confirmPassword;
     //   };
 
-        alert("OK")
+        // alert("OK")
     }
   
   })();
