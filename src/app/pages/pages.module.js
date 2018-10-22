@@ -23,6 +23,7 @@
     'BlurAdmin.pages.refusal',
     'BlurAdmin.pages.conciliationHearing',
     'BlurAdmin.pages.contestation',
+    'BlurAdmin.pages.manageClass',
     // 'BlurAdmin.pages.sanitationProcess',
   ])
       .config(routeConfig);

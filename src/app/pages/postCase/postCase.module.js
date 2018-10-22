@@ -14,6 +14,7 @@
           .state('postCase', {
             url: '/postCase',
             templateUrl: 'app/pages/postCase/post-case.html',
+            controller: 'PostCaseCtrl',
             // template: '<ui-view autoscroll="true" autoscroll-body-top></ui-view>',
             // abstract: true,
             title: 'Postar Caso',

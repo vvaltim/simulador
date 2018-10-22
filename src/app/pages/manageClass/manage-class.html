@@ -1,0 +1,81 @@
+<div class="widgets">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- <div ba-panel ba-panel-title="Criar turma" ba-panel-class="with-scroll">
+                <form>
+                    <div class="form-group col-md-12">
+                        <label for="textarea01">Nome</label>
+                        <input type="text" class="form-control" id="input01" placeholder="Nome da Turma">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="textarea01">Período</label>
+                        <input type="text" class="form-control" id="input01" placeholder="Período/Ano">
+                    </div>
+                    <div class="form-group col-md-6">
+                            <label for="textarea01">Senha</label>
+                            <input type="text" class="form-control" id="input01" placeholder="Senha">
+                        </div>
+                    <div class="button-wrapper">
+                        <button type="button" class="btn btn-primary">Salvar</button>
+                    </div>
+                </form>
+            </div> -->
+
+            <div ba-panel ba-panel-title="Suas turmas" ba-panel-class="with-scroll">
+                <div class="horizontal-scroll">
+
+                    <div class="button-wrapper">
+                        <button type="button" class="btn btn-primary">Criar turma</button>
+                    </div>
+
+                    <table class="table table-hover" st-table="smartTableData">
+                        <thead>
+                            <tr class="sortable ">
+                                <th class="table-id" st-sort="id" st-sort-default="true">ID</th>
+                                <th st-sort="firstName">Nome</th>
+                                <th st-sort="lastName">Turma</th>
+                                <th st-sort="username">Data</th>
+                                <th st-sort="email">Contestação</th>
+                                <th st-sort="age">Aprovada</th>
+                            </tr>
+                            <!-- <tr>
+                                        <th></th>
+                                        <th><input st-search="firstName" placeholder="Procurar por nome" class="input-sm form-control search-input"
+                                                type="search" /></th>
+                                        <th><input st-search="lastName" placeholder="Procurar por turma" class="input-sm form-control search-input"
+                                                type="search" /></th>
+                                        <th><input st-search="username" placeholder="Procurar por data" class="input-sm form-control search-input"
+                                                type="search" /></th>
+                                        <th><input st-search="email" placeholder="Procurar por contestação" class="input-sm form-control search-input"
+                                                type="search" />
+                                        </th>
+                                        <th> -->
+                            <!-- Tipo exercicio (saneamento, contestação) -->
+                            <!-- <input st-search="age" placeholder="Search Age" class="input-sm form-control search-input"
+                                                type="search" /> -->
+                            <!-- </th>
+                                    </tr> -->
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in smartTableData" ng-click="openExercise(item)">
+                                <td class="table-id">{{item.id}}</td>
+                                <td>{{item.firstName}}</td>
+                                <td>{{item.lastName}}</td>
+                                <td>{{item.username}}</td>
+                                <td style="max-width: 15ch;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">{{item.email}}</td>
+                                <td><i class="{{item.age}}"></i></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6" class="text-center">
+                                    <div st-pagination="" st-items-by-page="smartTablePageSize" st-displayed-pages="5"></div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

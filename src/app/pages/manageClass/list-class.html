@@ -1,0 +1,94 @@
+<div class="widgets">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- <div ba-panel ba-panel-title="Criar turma" ba-panel-class="with-scroll">
+                    <form>
+                        <div class="form-group col-md-12">
+                            <label for="textarea01">Nome</label>
+                            <input type="text" class="form-control" id="input01" placeholder="Nome da Turma">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="textarea01">Período</label>
+                            <input type="text" class="form-control" id="input01" placeholder="Período/Ano">
+                        </div>
+                        <div class="form-group col-md-6">
+                                <label for="textarea01">Senha</label>
+                                <input type="text" class="form-control" id="input01" placeholder="Senha">
+                            </div>
+                        <div class="button-wrapper">
+                            <button type="button" class="btn btn-primary">Salvar</button>
+                        </div>
+                    </form>
+                </div> -->
+            <div ba-panel ba-panel-title="Criar turma" ba-panel-class="with-scroll">
+                <!-- <div class="horizontal-scroll"> -->
+                <form class="row form-inline">
+                    <div class="form-group col-sm-3 col-xs-6">
+                        <input type="text" class="form-control" ng-model="newTeam.name" placeholder="Nome">
+                    </div>
+                    <div class="form-group col-sm-3 col-xs-6">
+                        <input type="text" class="form-control" ng-model="newTeam.period" placeholder="Período">
+                    </div>
+                    <div class="form-group col-sm-3 col-xs-6">
+                        <input type="password" class="form-control" ng-model="newTeam.password" placeholder="Senha">
+                    </div>
+                    <button type="submit" class="btn btn-primary" ng-click="createClass(newTeam)">Criar Turma</button>
+                </form>
+                <!-- </div> -->
+            </div>
+
+            <div ba-panel ba-panel-title="Suas turmas" ba-panel-class="with-scroll">
+                <div class="horizontal-scroll">
+                    <table class="table table-hover" st-table="smartTableData">
+                        <thead>
+                            <tr class="sortable ">
+                                <th class="table-id" st-sort="id" st-sort-default="true">ID</th>
+                                <th st-sort="firstName">Nome</th>
+                                <th st-sort="lastName">Período</th>
+                            </tr>
+                            <!-- <tr>
+                                            <th></th>
+                                            <th><input st-search="firstName" placeholder="Procurar por nome" class="input-sm form-control search-input"
+                                                    type="search" /></th>
+                                            <th><input st-search="lastName" placeholder="Procurar por turma" class="input-sm form-control search-input"
+                                                    type="search" /></th>
+                                            <th><input st-search="username" placeholder="Procurar por data" class="input-sm form-control search-input"
+                                                    type="search" /></th>
+                                            <th><input st-search="email" placeholder="Procurar por contestação" class="input-sm form-control search-input"
+                                                    type="search" />
+                                            </th>
+                                            <th> -->
+                            <!-- Tipo exercicio (saneamento, contestação) -->
+                            <!-- <input st-search="age" placeholder="Search Age" class="input-sm form-control search-input"
+                                                    type="search" /> -->
+                            <!-- </th>
+                                        </tr> -->
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in classes">
+                                <td class="table-id">{{item.id}}</td>
+                                <td>{{item.name}}</td>
+                                <td>{{item.period}}</td>
+                                <td style="align-items:flex-end">
+                                    <!-- <button type="button" class="btn btn-warning btn-icon" ng-click="editClass(item)">
+                                        <ion-icon name="create"></ion-icon>
+                                    </button> -->
+                                    <button type="button" class="btn btn-danger btn-icon" ng-click="deleteClass(item)">
+                                        <ion-icon name="trash"></ion-icon>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6" class="text-center">
+                                    <div st-pagination="" st-items-by-page="smartTablePageSize" st-displayed-pages="5"></div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
