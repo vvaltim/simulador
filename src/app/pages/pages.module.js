@@ -18,6 +18,7 @@
     // 'BlurAdmin.pages.profile',
     'BlurAdmin.pages.postCase',
     'BlurAdmin.pages.exerciseCorrection',
+    'BlurAdmin.pages.exerciseStudent',
     'BlurAdmin.pages.sentence',
     'BlurAdmin.pages.initialPetition',
     'BlurAdmin.pages.refusal',
