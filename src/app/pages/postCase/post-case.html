@@ -5,16 +5,16 @@
                 <form>
                     <div class="form-group">
                         <label for="textarea01">Caso</label>
-                        <textarea placeholder="" class="form-control" id="textarea01"></textarea>
+                        <textarea placeholder="" class="form-control" ng-model="classes.caseDescription"></textarea>
                     </div>
 
                     <div class="col-md-4" ng-repeat="item in classes">
                         <label class="checkbox-inline custom-checkbox nowrap">
-                            <input type="checkbox" id="inlineCheckbox02" value="{{option2}}">
-                            <span>{{item.name}}</span>
+                            <input type="checkbox" value="{{item.codTeam}}" ng-model="item.selected">
+                            <span>{{item.codTeam}} - {{item.username}}</span>
                         </label>
                     </div>
-                    <div class="button-wrapper"><button type="button" class="btn btn-primary">Postar</button></div>
+                    <div class="button-wrapper"><button type="button" class="btn btn-primary" ng-click="saveCase(classes)">Postar</button></div>
                 </form>
             </div>
         </div>

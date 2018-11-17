@@ -40,6 +40,10 @@
             });
         }
 
+        $scope.saveTeacher = function(codTeacher){
+            localStorage.setItem("codTeacher", parseInt(codTeacher));
+        }
+
     }
 
 })();
