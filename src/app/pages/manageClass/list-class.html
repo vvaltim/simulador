@@ -1,64 +1,27 @@
 <div class="widgets">
     <div class="row">
         <div class="col-md-12">
-            <div ba-panel ba-panel-title="Id professor logado" ba-panel-class="with-scroll">
-                <form class="row form-inline">
-                    <div class="form-group col-sm-3 col-xs-6">
-                        <input type="text" class="form-control" ng-model="codTeacher" placeholder="Cod. Professor">
-                    </div>
-                    <button type="submit" class="btn btn-primary" ng-click="saveTeacher(codTeacher)">Salvar id Professor</button>
-                </form>
-            </div>
-
-            <div ba-panel ba-panel-title="Criar turma" ba-panel-class="with-scroll">
-                <!-- <div class="horizontal-scroll"> -->
-                <form class="row form-inline">
-                    <div class="form-group col-sm-3 col-xs-6">
-                        <input type="text" class="form-control" ng-model="newTeam.name" placeholder="Nome">
-                    </div>
-                    <div class="form-group col-sm-3 col-xs-6">
-                        <input type="text" class="form-control" ng-model="newTeam.period" placeholder="Período">
-                    </div>
-                    <div class="form-group col-sm-3 col-xs-6">
-                        <input type="password" class="form-control" ng-model="newTeam.password" placeholder="Senha">
-                    </div>
-                    <button type="submit" class="btn btn-primary" ng-click="createClass(newTeam)">Criar Turma</button>
-                </form>
-                <!-- </div> -->
-            </div>
-
             <div ba-panel ba-panel-title="Suas turmas" ba-panel-class="with-scroll">
                 <div class="horizontal-scroll">
                     <table class="table table-hover" st-table="smartTableData">
                         <thead>
                             <tr class="sortable ">
                                 <th class="table-id" st-sort="id" st-sort-default="true">ID</th>
-                                <th st-sort="firstName">Nome</th>
+                                <th st-sort="firstName">Disciplina</th>
                                 <th st-sort="lastName">Período</th>
+                                <th st-sort="lastName">Ano</th>
+                                <th st-sort="lastName">Semestre</th>
+                                <th st-sort="lastName">Nome de usuário</th>
                             </tr>
-                            <!-- <tr>
-                                            <th></th>
-                                            <th><input st-search="firstName" placeholder="Procurar por nome" class="input-sm form-control search-input"
-                                                    type="search" /></th>
-                                            <th><input st-search="lastName" placeholder="Procurar por turma" class="input-sm form-control search-input"
-                                                    type="search" /></th>
-                                            <th><input st-search="username" placeholder="Procurar por data" class="input-sm form-control search-input"
-                                                    type="search" /></th>
-                                            <th><input st-search="email" placeholder="Procurar por contestação" class="input-sm form-control search-input"
-                                                    type="search" />
-                                            </th>
-                                            <th> -->
-                            <!-- Tipo exercicio (saneamento, contestação) -->
-                            <!-- <input st-search="age" placeholder="Search Age" class="input-sm form-control search-input"
-                                                    type="search" /> -->
-                            <!-- </th>
-                                        </tr> -->
                         </thead>
                         <tbody>
                             <tr ng-repeat="item in classes">
-                                <td class="table-id">{{item.id}}</td>
-                                <td>{{item.name}}</td>
+                                <td class="table-id">{{item.codTeam}}</td>
+                                <td>{{item.discipline}}</td>
                                 <td>{{item.period}}</td>
+                                <td>{{item.year}}</td>
+                                <td>{{item.semester}}</td>
+                                <td>{{item.username}}</td>
                                 <td style="align-items:flex-end">
                                     <!-- <button type="button" class="btn btn-warning btn-icon" ng-click="editClass(item)">
                                         <ion-icon name="create"></ion-icon>
@@ -78,6 +41,46 @@
                         </tfoot>
                     </table>
                 </div>
+            </div>
+
+            <div ba-panel ba-panel-title="Criar turma" ba-panel-class="with-scroll">
+                <form>
+                    <div class="form-group">
+                        <label for="input03">Disciplina</label>
+                        <input type="text" class="form-control" ng-model="newTeam.discipline" placeholder="Nome da disciplina">
+                    </div>
+                    <div class="form-group">
+                        <label for="input03">Período</label>
+                        <input type="number" class="form-control" ng-model="newTeam.period" placeholder="Período">
+                    </div>
+                    <div class="form-group">
+                        <label for="input03">Ano</label>
+                        <input type="number" class="form-control" ng-model="newTeam.year" placeholder="Ano">
+                    </div>
+                    <div class="form-group">
+                        <label for="input03">Semestre</label>
+                        <input type="number" class="form-control" ng-model="newTeam.semester" placeholder="Semestre">
+                    </div>
+                    <div class="form-group">
+                        <label for="input03">Nome de usuário (para login do aluno)</label>
+                        <input type="text" class="form-control" ng-model="newTeam.username" placeholder="Nome de usuário">
+                    </div>
+                    <div class="form-group">
+                        <label for="input03">Senha de acesso do aluno</label>
+                        <input type="password" class="form-control" ng-model="newTeam.password" placeholder="Senha">
+                    </div>
+                    <button type="submit" class="btn btn-primary" ng-click="createClass(newTeam)">Criar Turma</button>
+                </form>
+            </div>
+
+            <div ba-panel ba-panel-title="Id professor logado" ba-panel-class="with-scroll">
+                <form class="row form-inline">
+                    <div class="form-group col-sm-3 col-xs-6">
+                        <input type="text" class="form-control" ng-model="codTeacher" placeholder="Cod. Professor">
+                    </div>
+                    <button type="submit" class="btn btn-primary" ng-click="saveTeacher(codTeacher)">Salvar id
+                        Professor</button>
+                </form>
             </div>
         </div>
     </div>

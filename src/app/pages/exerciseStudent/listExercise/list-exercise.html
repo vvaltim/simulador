@@ -1,52 +1,47 @@
 <div class="widgets">
     <div class="row">
+
         <div class="col-md-12">
             <div ba-panel ba-panel-class="with-scroll">
-
                 <div class="horizontal-scroll">
-                    <table class="table table-hover" st-table="smartTableData">
+                    <table class="table table-hover">
                         <thead>
-                            <tr class="sortable ">
-                                <th class="table-id" st-sort="id" st-sort-default="true">ID</th>
-                                <th st-sort="firstName">Nome</th>
-                                <th st-sort="username">Data</th>
-                                <th st-sort="age">Aprovada</th>
+                            <tr>
+                                <th>ID</th>
+                                <th>Professor</th>
+                                <th>Descrição do caso</th>
+                                <th>Date</th>
                             </tr>
-                            <!-- <tr>
-                                <th></th>
-                                <th><input st-search="firstName" placeholder="Procurar por nome" class="input-sm form-control search-input"
-                                        type="search" /></th>
-                                <th><input st-search="lastName" placeholder="Procurar por turma" class="input-sm form-control search-input"
-                                        type="search" /></th>
-                                <th><input st-search="username" placeholder="Procurar por data" class="input-sm form-control search-input"
-                                        type="search" /></th>
-                                <th><input st-search="email" placeholder="Procurar por contestação" class="input-sm form-control search-input"
-                                        type="search" />
-                                </th>
-                                <th>
-                                    Tipo exercicio (saneamento, contestação)
-                                   <input st-search="age" placeholder="Search Age" class="input-sm form-control search-input"
-                                        type="search" />
-                                </th>
-                            </tr> -->
                         </thead>
                         <tbody>
                             <tr ng-repeat="item in smartTableData" ng-click="openExercise(item)">
-                                <td class="table-id">{{item.id}}</td>
-                                <td>{{item.firstName}}</td>
-                                <td>{{item.lastName}}</td>
-                                <td>{{item.username}}</td>
+                                <td class="table-id">{{item.codExercise}}</td>
+                                <td>{{item.codTeacher}}</td>
+                                <td>{{item.caseDescription}}</td>
+                                <td>{{item.dateCreate}}</td>
                             </tr>
                         </tbody>
                         <tfoot>
-                            <tr>
+                            <!-- <tr>
                                 <td colspan="6" class="text-center">
                                     <div st-pagination="" st-items-by-page="smartTablePageSize" st-displayed-pages="5"></div>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tfoot>
                     </table>
                 </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div ba-panel ba-panel-title="Id turma logada" ba-panel-class="with-scroll">
+                <form class="row form-inline">
+                    <div class="form-group col-sm-3 col-xs-6">
+                        <input type="number" class="form-control" ng-model="codTeam" placeholder="Cod. Turma Logada">
+                    </div>
+                    <button type="submit" class="btn btn-primary" ng-click="saveTeam(codTeam)">Salvar id
+                        Professor</button>
+                </form>
             </div>
         </div>
     </div>
