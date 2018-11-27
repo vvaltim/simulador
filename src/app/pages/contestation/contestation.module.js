@@ -27,18 +27,18 @@
 
           }
         }
-      })
-      .state('sanitationProcess', {
-        url: '/contestation/sanitationProcess',
-        templateUrl: 'app/pages/contestation/sanitation-process.html',
+      });
+      // .state('sanitationProcess', {
+      //   url: '/contestation/sanitationProcess',
+      //   templateUrl: 'app/pages/contestation/sanitation-process.html',
         // controller: 'SanitationProcessCtrl',
         // template: '<ui-view autoscroll="true" autoscroll-body-top></ui-view>',
         // abstract: true,
-        title: 'Saneamento',
+        // title: 'Saneamento',
         // sidebarMeta: {
         //   icon: 'ion-ios-briefcase',
         //   order: 0,
         // },
-      });
+      // });
   }
 })();

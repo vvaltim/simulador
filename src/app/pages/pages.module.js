@@ -7,27 +7,20 @@
 
   angular.module('BlurAdmin.pages', [
     'ui.router',
-
-    'BlurAdmin.pages.dashboard',
-    // 'BlurAdmin.pages.ui',
-    // 'BlurAdmin.pages.components',
-    // 'BlurAdmin.pages.form',
-    // 'BlurAdmin.pages.tables',
-    // 'BlurAdmin.pages.charts',
-    // 'BlurAdmin.pages.maps',
-    // 'BlurAdmin.pages.profile',
     'BlurAdmin.pages.postCase',
-    'BlurAdmin.pages.exerciseCorrection',
-    'BlurAdmin.pages.exerciseStudent',
-    'BlurAdmin.pages.sentence',
     'BlurAdmin.pages.initialPetition',
-    'BlurAdmin.pages.refusal',
+    'BlurAdmin.pages.exerciseCorrection',
     'BlurAdmin.pages.conciliationHearing',
     'BlurAdmin.pages.contestation',
-    'BlurAdmin.pages.manageClass',
-    // 'BlurAdmin.pages.sanitationProcess',
+    'BlurAdmin.pages.sanitationProcess',
+    'BlurAdmin.pages.conciliationHearing',
+    'BlurAdmin.pages.sentence',
+
+    // 'BlurAdmin.pages.exerciseStudent',
+    // 'BlurAdmin.pages.refusal',
+    // 'BlurAdmin.pages.manageClass',
   ])
-      .config(routeConfig);
+    .config(routeConfig);
 
   /** @ngInject */
   function routeConfig($urlRouterProvider, baSidebarServiceProvider) {
