@@ -15,6 +15,7 @@
     'BlurAdmin.pages.sanitationProcess',
     'BlurAdmin.pages.conciliationHearing',
     'BlurAdmin.pages.sentence',
+    'BlurAdmin.pages.correction',
 
     // 'BlurAdmin.pages.exerciseStudent',
     // 'BlurAdmin.pages.refusal',

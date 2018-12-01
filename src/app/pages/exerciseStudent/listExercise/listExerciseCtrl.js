@@ -15,15 +15,17 @@
         $scope.smartTableData = [
             {
                 codExercise: 1,
-                codTeacher: 'Turma direito Institucional 2018/02',
+                nameTeam: 'Aluno 2 Turma direito Institucional 2018/02',
                 caseDescription: '6 Período, Turma 3',
-                dateCreate: '23/09/2018'
+                dateCreate: '23/09/2018',
+                type: 'Contestação'
             },
             {
-                codExercise: 1,
-                codTeacher: 'Aluno 1',
+                codExercise: 2,
+                nameTeam: 'Aluno 1 Turma direito Institucional 2018/02',
                 caseDescription: '6 Período, Turma 3',
-                dateCreate: '23/09/2018'
+                dateCreate: '23/09/2018',
+                type: 'Petição Inicial'
             }
         ];
 
@@ -44,8 +46,10 @@
 
 
         $scope.openExercise = function (item) {
-            console.log("Item Clicado", item);
-            $state.go('contestation', { "item": item });
+
+                console.log("Item Clicado", item);
+                $state.go('correction', { "item": item });
+
         }
 
     }

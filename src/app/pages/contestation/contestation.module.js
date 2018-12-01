@@ -18,10 +18,10 @@
         // abstract: true,
         controller: 'ContestationCtrl',
         title: 'Contestação',
-        // sidebarMeta: {
-        //   icon: 'ion-ios-briefcase',
-        //   order: 0,
-        // },
+        sidebarMeta: {
+          icon: 'ion-ios-briefcase',
+          order: 0,
+        },
         params: {
           "item" : {
 
