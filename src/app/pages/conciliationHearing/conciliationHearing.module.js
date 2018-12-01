@@ -16,7 +16,7 @@
             templateUrl: 'app/pages/conciliationHearing/conciliation-hearing.html',
             // template: '<ui-view autoscroll="true" autoscroll-body-top></ui-view>',
             // abstract: true,
-            title: 'Audiência de conciliação',
+            title: 'Aud. de conciliação',
             sidebarMeta: {
               icon: 'ion-ios-briefcase',
               order: 0,
