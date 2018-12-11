@@ -25,7 +25,8 @@
                     var exercise = {
                         "codTeacher": value.codTeacher,
                         "codTeam": value.codTeam,
-                        "caseDescription": classes.caseDescription
+                        "caseDescription": classes.caseDescription,
+                        "status": 1
                     }
                     request.push(exercise);
                 }
@@ -36,7 +37,6 @@
                 url: 'http://localhost:8080/exercise/create/',
                 data: request
             }).then(function success(response) {
-            
                 //feedback visual de sucesso
                 toastr.success('', 'Caso postado com sucesso', {
                     "autoDismiss": false,
@@ -53,6 +53,8 @@
                     "preventDuplicates": false,
                     "preventOpenDuplicates": false
                   });
+
+                $scope.classes.caseDescription = "";                  
 
             }, function onError(response) {
 

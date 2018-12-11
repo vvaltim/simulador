@@ -16,7 +16,7 @@
             templateUrl: 'app/pages/exerciseCorrection/listExercise/list-exercise.html',
             // template: '<ui-view autoscroll="true" autoscroll-body-top></ui-view>',
             // abstract: true,
-            controller: 'ListExerciseCtrl',
+            controller: 'ListCorrectionExerciseCtrl',
             title: 'Corrigir Exercícios',
             sidebarMeta: {
               icon: 'fas fa fa-bank',

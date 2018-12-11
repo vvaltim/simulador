@@ -5,7 +5,7 @@
 (function () {
     'use strict';
 
-    angular.module('BlurAdmin.pages.exerciseCorrection')
+    angular.module('BlurAdmin.pages.exerciseStudent')
         .controller('ListExerciseCtrl', ListExerciseCtrl);
 
     /** @ngInject */
@@ -26,10 +26,25 @@
             localStorage.setItem("codTeam", parseInt(codTeam));
         }
 
+        $scope.saveStudent = function(codStudent){
+            localStorage.setItem("codStudent", parseInt(codStudent));
+        }
+
 
         $scope.openExercise = function (item) {
-            console.log("Item Clicado", item);
-            $state.go('contestation', { "item": item });
+            /**
+             * Status 1 - Aluno 1 vai postar a petição inicial
+             */
+            if(item.status == 1 && localStorage.getItem("codStudent") == "1"){
+                console.log("Item Clicado", item);
+                $state.go('initialPetition', { "item": item });
+                return
+            }
+
+            /**
+             * 
+             */
+            
         }
 
     }

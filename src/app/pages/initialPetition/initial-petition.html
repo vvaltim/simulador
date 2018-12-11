@@ -1,17 +1,22 @@
 <div class="widgets">
     <div class="row">
         <div class="col-md-12">
+            <div ba-panel ba-panel-title="Caso" ba-panel-class="with-scroll">
+                {{case.caseDescription  }}
+            </div>
+        </div>
+        <div class="col-md-12">
             <div ba-panel ba-panel-title="Petição inicial" ba-panel-class="with-scroll">
                 <form>
                     <div class="form-group">
                         <label for="textarea01">Elaborar a Petição Inicial</label>
-                        <textarea placeholder="Descreve o caso..." class="form-control" id="textarea01"></textarea>
+                        <textarea placeholder="Descreva a petição inicial..." class="form-control" ng-model="initialPetitionText"></textarea>
                     </div>
                     <div class="alert bg-info">
                         Elabore sua <strong>Petição Inicial</strong> conforme requisitos do <a href="https://www.passeidireto.com/arquivo/35388068/modelo-de-peticao---novo-cpc/1?utm_source=whatsapp&utm_medium=mobile&utm_campaign=android-arquivo"
                             target="_blank" class="alert-link">Artigo 319 do NCPC</a>.
                     </div>
-                    <div class="button-wrapper"><button type="button" class="btn btn-primary">Incluir</button></div>
+                    <div class="button-wrapper"><button type="button" class="btn btn-primary" ng-click="save(initialPetitionText)">Incluir</button></div>
                 </form>
             </div>
         </div>

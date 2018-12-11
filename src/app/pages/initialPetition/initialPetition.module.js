@@ -14,13 +14,16 @@
           .state('initialPetition', {
             url: '/initialPetition',
             templateUrl: 'app/pages/initialPetition/initial-petition.html',
-            // template: '<ui-view autoscroll="true" autoscroll-body-top></ui-view>',
-            // abstract: true,
+            controller: 'InitialPetitionCtrl',
             title: 'Petição Inicial',
             sidebarMeta: {
               icon: 'ion-ios-briefcase',
               order: 0,
             },
+            params: {
+              "item" : {
+              }
+            }
           });
     }
   })();

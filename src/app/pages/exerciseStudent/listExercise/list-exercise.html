@@ -10,7 +10,8 @@
                                 <th>ID</th>
                                 <th>Professor</th>
                                 <th>Descrição do caso</th>
-                                <th>Date</th>
+                                <th>Data</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -19,6 +20,7 @@
                                 <td>{{item.codTeacher}}</td>
                                 <td>{{item.caseDescription}}</td>
                                 <td>{{item.dateCreate}}</td>
+                                <td>{{item.status}}</td>
                             </tr>
                         </tbody>
                         <tfoot>
@@ -35,12 +37,17 @@
 
         <div class="col-md-12">
             <div ba-panel ba-panel-title="Id turma logada" ba-panel-class="with-scroll">
-                <form class="row form-inline">
+                <form class="row">
                     <div class="form-group col-sm-3 col-xs-6">
                         <input type="number" class="form-control" ng-model="codTeam" placeholder="Cod. Turma Logada">
                     </div>
                     <button type="submit" class="btn btn-primary" ng-click="saveTeam(codTeam)">Salvar id
                         Professor</button>
+
+                    <div class="form-group col-sm-3 col-xs-6">
+                        <input type="number" class="form-control" ng-model="codStudent" placeholder="Numero aluno (1 ou 2)">
+                    </div>
+                    <button type="submit" class="btn btn-primary" ng-click="saveStudent(codStudent)">Salvar id Aluno</button>
                 </form>
             </div>
         </div>
