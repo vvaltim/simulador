@@ -2,19 +2,17 @@
     <div class="row">
         <div class="col-md-12">
             <div ba-panel ba-panel-class="with-scroll">
-
                 <div class="horizontal-scroll">
                     <table class="table table-hover" st-table="smartTableData">
                         <thead>
                             <tr class="sortable ">
                                 <th class="table-id" st-sort="id" st-sort-default="true">ID</th>
-                                <th st-sort="firstName">Nome</th>
+                                <th st-sort="firstName">Descrição</th>
                                 <th st-sort="lastName">Turma</th>
                                 <th st-sort="username">Data</th>
-                                <th st-sort="email">Contestação</th>
-                                <th st-sort="age">Aprovada</th>
+                                <th st-sort="email">Status</th>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <th></th>
                                 <th><input st-search="firstName" placeholder="Procurar por nome" class="input-sm form-control search-input"
                                         type="search" /></th>
@@ -26,20 +24,18 @@
                                         type="search" />
                                 </th>
                                 <th>
-                                    <!-- Tipo exercicio (saneamento, contestação) -->
-                                    <!-- <input st-search="age" placeholder="Search Age" class="input-sm form-control search-input"
-                                        type="search" /> -->
+                                    <input st-search="age" placeholder="Search Age" class="input-sm form-control search-input"
+                                        type="search" />
                                 </th>
-                            </tr>
+                            </tr> -->
                         </thead>
                         <tbody>
-                            <tr ng-repeat="item in teste" ng-click="openExercise(item)">
-                                <td class="table-id">{{item.id}}</td>
-                                <td>{{item.firstName}}</td>
-                                <td>{{item.lastName}}</td>
-                                <td>{{item.username}}</td>
-                                <td style="max-width: 15ch;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">{{item.email}}</td>
-                                <td><i class="{{item.age}}"></i></td>
+                            <tr ng-repeat="item in exercises" ng-click="openExercise(item)">
+                                <td class="table-id">{{item.codExercise}}</td>
+                                <td style="max-width: 15ch;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">{{item.caseDescription}}</td>
+                                <td>{{item.codTeam}}</td>
+                                <td>{{item.dateCreate}}</td>
+                                <td >{{item.status}}</td>
                             </tr>
                         </tbody>
                         <tfoot>
@@ -51,7 +47,6 @@
                         </tfoot>
                     </table>
                 </div>
-
             </div>
         </div>
     </div>

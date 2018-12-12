@@ -10,6 +10,7 @@
 
         $scope.save = function(initialPetitionText){
             $scope.case.initialPetition = initialPetitionText
+            $scope.case.status = 2
             console.log($scope.case)
             $http({
                 method: 'POST',

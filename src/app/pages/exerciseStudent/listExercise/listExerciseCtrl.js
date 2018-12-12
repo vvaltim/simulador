@@ -42,8 +42,13 @@
             }
 
             /**
-             * 
+             * Status 3- Aluno 1 vai corrigir a petição inicial
              */
+            if(item.status == 3 && localStorage.getItem("codStudent") == "1"){
+                console.log("Item Clicado", item);
+                $state.go('initialPetition', { "item": item });
+                return
+            }
             
         }
 
