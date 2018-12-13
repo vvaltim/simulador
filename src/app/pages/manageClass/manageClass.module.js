@@ -15,11 +15,9 @@
         url: '/listClass',
         templateUrl: 'app/pages/manageClass/list-class.html',
         controller: 'ListClassCtrl',
-        // template: '<ui-view autoscroll="true" autoscroll-body-top></ui-view>',
-        // abstract: true,
         title: 'Gerenciar turma',
         sidebarMeta: {
-          icon: 'ion-ios-briefcase',
+          icon: 'fas fa fa-bank',
           order: 0,
         },
       })
@@ -27,7 +25,6 @@
         url: '/createClass',
         templateUrl: 'app/pages/manageClass/create-class.html',
         controller: 'CreateClassCtrl',
-        // template: '<ui-view autoscroll="true" autoscroll-body-top></ui-view>',
         title: 'Criar turma',
       });
   }

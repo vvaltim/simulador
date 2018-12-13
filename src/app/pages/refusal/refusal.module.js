@@ -15,13 +15,7 @@
             url: '/refusal',
             templateUrl: 'app/pages/refusal/refusal.html',
             controller: 'RefusalCtrl',
-            // template: '<ui-view autoscroll="true" autoscroll-body-top></ui-view>',
-            // abstract: true,
-            title: 'Indeferimento',
-            sidebarMeta: {
-              icon: 'ion-ios-briefcase',
-              order: 0,
-            },
+            title: 'Indeferimento'
           });
     }
   })();

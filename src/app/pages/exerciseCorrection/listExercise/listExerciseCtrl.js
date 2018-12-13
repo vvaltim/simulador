@@ -21,9 +21,34 @@
         });
 
         $scope.openExercise = function (item) {
-            //se o status for igual 2, abrir tela para professor corrigir a petição Inicial
+            /**
+             * se o status for igual 2, abrir tela para professor corrigir a petição Inicial
+             */
             if(item.status == 2){
                 $state.go('correctionExercise', { "item": item });
+            }
+
+            /**
+             * Se p status = 6, abrir a tela para professor realizar o saneamento
+             */
+            if(item.status == 6){
+                $state.go('sanitationProcess', { "item": item });
+            }
+
+            /**
+             * Se o status = 8, abrir a tela para inserir a sentença
+             */
+            if(item.status == 8){
+                $state.go('sentence', { "item": item });
+            }
+
+            /**
+             * Status 99 - Todos podem ver, resumo do caso
+             */
+            if(item.status == 99){
+                console.log("Item Clicado", item);
+                $state.go('allCase', { "item": item });
+                return
             }
         }
 

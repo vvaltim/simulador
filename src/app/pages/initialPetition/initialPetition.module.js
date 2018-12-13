@@ -16,10 +16,6 @@
             templateUrl: 'app/pages/initialPetition/initial-petition.html',
             controller: 'InitialPetitionCtrl',
             title: 'Petição Inicial',
-            sidebarMeta: {
-              icon: 'ion-ios-briefcase',
-              order: 0,
-            },
             params: {
               "item" : {
               }

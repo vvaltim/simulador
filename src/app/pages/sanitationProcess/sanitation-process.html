@@ -1,0 +1,28 @@
+<div class="widgets">
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-class="with-scroll">
+                <h2>Caso</h2>
+                <p>{{exercise.caseDescription}}</p>
+
+                <h2>Petição Inicial</h2>
+                <p>{{exercise.initialPetition}}</p>
+
+                <h2>Contestação</h2>
+                <p>{{exercise.contestation}}</p>
+
+                <div class="separator"></div>
+
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-primary" ng-click="toChange()">Prazo para alterar</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-primary" ng-click="extinction()">Extinção do Processo</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-primary" ng-click="conciliation()">Audiência de instrução e julgamento</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -14,30 +14,32 @@
       .state('contestation', {
         url: '/contestation',
         templateUrl: 'app/pages/contestation/contestation.html',
-        // template: '<ui-view autoscroll="true" autoscroll-body-top></ui-view>',
-        // abstract: true,
         controller: 'ContestationCtrl',
         title: 'Contestação',
-        // sidebarMeta: {
-        //   icon: 'ion-ios-briefcase',
-        //   order: 0,
-        // },
         params: {
-          "item" : {
+          "item": {
           }
         }
       })
-      .state('sanitationProcess', {
-        url: '/contestation/sanitationProcess',
-        templateUrl: 'app/pages/contestation/sanitation-process.html',
-        // controller: 'SanitationProcessCtrl',
-        // template: '<ui-view autoscroll="true" autoscroll-body-top></ui-view>',
-        // abstract: true,
-        title: 'Saneamento',
-        // sidebarMeta: {
-        //   icon: 'ion-ios-briefcase',
-        //   order: 0,
-        // },
+      .state('sendContestation', {
+        url: '/sendContestation',
+        templateUrl: 'app/pages/contestation/sendContestation/send-contestation.html',
+        controller: 'SendContestationCtrl',
+        title: 'Contestação',
+        params: {
+          "item": {
+          }
+        }
+      })
+      .state('correctionContestation', {
+        url: '/correctionContestation',
+        templateUrl: 'app/pages/contestation/correctionContestation/correction-contestation.html',
+        controller: 'CorrectionContestationCtrl',
+        title: 'Corrigir Contestação',
+        params: {
+          "item": {
+          }
+        }
       });
   }
 })();

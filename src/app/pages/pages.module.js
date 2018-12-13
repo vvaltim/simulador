@@ -16,13 +16,14 @@
     'BlurAdmin.pages.manageClass',
     'BlurAdmin.pages.exerciseCorrection',
     'BlurAdmin.pages.exerciseStudent',
-    // 'BlurAdmin.pages.sanitationProcess',
+    'BlurAdmin.pages.sanitationProcess',
+    'BlurAdmin.pages.allCase'
   ])
       .config(routeConfig);
 
   /** @ngInject */
   function routeConfig($urlRouterProvider, baSidebarServiceProvider) {
-    $urlRouterProvider.otherwise('/exerciseCorrection');
+    $urlRouterProvider.otherwise('/listClass');
   }
 
 })();

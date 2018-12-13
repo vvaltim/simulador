@@ -49,7 +49,42 @@
                 $state.go('initialPetition', { "item": item });
                 return
             }
+
+            /**
+             * Status 4 - Aluno 1 ou aluno 2 vai clicar em audiencia de conciliação
+             */
+            if(item.status == 4){
+                console.log("Item Clicado", item);
+                $state.go('conciliationHearingConfirm', { "item": item });
+                return
+            }
+
+            /**
+             * Status 5 - Aluno 2 vai postar contestação
+             */
+            if(item.status == 5 && localStorage.getItem("codStudent") == "2"){
+                console.log("Item Clicado", item);
+                $state.go('sendContestation', { "item": item });
+                return
+            }
+
+            /**
+             * Status 7 - Aluno 1 ou aluno 2 vai clicar em audiencia de conciliação
+             */
+            if(item.status == 7){
+                console.log("Item Clicado", item);
+                $state.go('conciliationHearingConfirm', { "item": item });
+                return
+            }
             
+            /**
+             * Status 99 - Todos podem ver, resumo do caso
+             */
+            if(item.status == 99){
+                console.log("Item Clicado", item);
+                $state.go('allCase', { "item": item });
+                return
+            }
         }
 
     }

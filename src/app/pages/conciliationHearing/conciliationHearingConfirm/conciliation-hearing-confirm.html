@@ -1,0 +1,29 @@
+<div class="widgets">
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-title="Dados da Autiência" ba-panel-class="with-scroll">
+                <h3>Justificativa</h3>
+                <p>{{conciliation.justification}}</p>
+
+                <h3>Data</h3>
+                <p>{{conciliation.date}}</p>
+
+                <h3>Complemento</h3>
+                <p>{{conciliation.addressComplement}}</p>
+
+                <h3>Local</h3>
+                <p>{{conciliation.location}}</p>
+
+                <div class="separator"></div>
+                <h2>Houve autocomposição?</h2>
+
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-primary" ng-click="sendConciliation(true)" ng-disabled="isDisabled">Sim</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-danger" ng-click="sendConciliation(false)" ng-disabled="isDisabled">Não</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

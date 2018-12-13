@@ -1,0 +1,28 @@
+<div class="widgets">
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-class="with-scroll">
+                <h4>Caso</h4>
+                <p>{{exercise.caseDescription}}</p>
+                <div class="separator"></div>
+                <h4>Petição Inicial</h4>
+                <p>{{exercise.initialPetition}}</p>
+                <div class="separator" ng-hide="exercise.correctionContestation == null"></div>
+                <h4 ng-hide="exercise.correctionContestation == null">Correção solicitada pelo Juíz</h4>
+                <p>{{exercise.correctionContestation}}</p>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div ba-panel ba-panel-title="Enviar contestação" ba-panel-class="with-scroll">
+                <form>
+                    <div class="form-group">
+                        <label for="textarea01">Contestação do Réu</label>
+                        <textarea placeholder="Descreva a contestação..." class="form-control" ng-model="contestation"></textarea>
+                    </div>
+                    <div class="button-wrapper"><button type="button" class="btn btn-primary" ng-click="send(contestation)">Enviar
+                            contestação</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

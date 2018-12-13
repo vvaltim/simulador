@@ -13,13 +13,19 @@
 		$stateProvider
 			.state('conciliationHearing', {
 				url: '/conciliationHearing',
-				templateUrl: 'app/pages/conciliationHearing/conciliation-hearing.html',
+				templateUrl: 'app/pages/conciliationHearing/conciliationHearing/conciliation-hearing.html',
 				title: 'Aud. de conciliação',
 				controller: 'ConciliationHearingCtrl',
-				sidebarMeta: {
-					icon: 'ion-ios-briefcase',
-					order: 0,
-				},
+				params: {
+					"item": {
+					}
+				}
+			})
+			.state('conciliationHearingConfirm', {
+				url: '/conciliationHearingConfirm',
+				templateUrl: 'app/pages/conciliationHearing/conciliationHearingConfirm/conciliation-hearing-confirm.html',
+				title: 'Aud. de conciliação',
+				controller: 'ConciliationHearingConfirmCtrl',
 				params: {
 					"item": {
 					}

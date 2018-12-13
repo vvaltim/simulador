@@ -49,7 +49,6 @@
             }).then(function success(response) {
                 console.log(response.data);
                 if(response.data.responseMessage == "Salvo com sucesso"){
-                    toastSucess()
                     //mandar para a audiencia de conciliação
                     $state.go('conciliationHearing', { "item": $scope.exercise})
                 } else {

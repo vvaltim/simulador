@@ -14,14 +14,12 @@
             .state('sanitationProcess', {
                 url: '/sanitationProcess',
                 templateUrl: 'app/pages/sanitationProcess/sanitation-process.html',
-                // controller: 'SanitationProcessCtrl',
-                // template: '<ui-view autoscroll="true" autoscroll-body-top></ui-view>',
-                // abstract: true,
+                controller: 'SanitationProcessCtrl',
                 title: 'Saneamento',
-                sidebarMeta: {
-                    icon: 'ion-ios-briefcase',
-                    order: 0,
-                },
+                params: {
+                    "item": {
+                    }
+                }
             });
     }
 })();

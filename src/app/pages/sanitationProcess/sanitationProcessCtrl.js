@@ -1,23 +1,27 @@
 (function () {
     'use strict';
   
-    angular.module('BlurAdmin.pages.conciliationHearing')
-        .controller('ConciliationHearingCtrl', ConciliationHearingCtrl);
+    angular.module('BlurAdmin.pages.sanitationProcess')
+        .controller('SanitationProcessCtrl', SanitationProcessCtrl);
+  
+    /** @ngInject */
+    function SanitationProcessCtrl($scope, $state, $stateParams, $http, toastr) {
+        $scope.exercise = $stateParams.item
 
-    function ConciliationHearingCtrl($scope, $stateParams, $http, toastr) {
-        var exercise = $stateParams.item;
-        console.log(exercise);
-
-        $scope.saveConciliation = function(conciliationHearing){
-            console.log(conciliationHearing);
+        /**
+         * Extinção do processo por algum erro muito grave
+         */
+        $scope.extinction = function(){
+            $scope.exercise.status = 99;
+            $scope.exercise.veredict = "Impugnação por agravo de instrumento"
             $http({
                 method: 'POST',
-                url: 'http://localhost:8080/conciliation/createOrUpdate',
-                data: conciliationHearing
+                url: 'http://localhost:8080/exercise/update',
+                data: $scope.exercise
             }).then(function success(response) {
                 console.log(response.data);
                 if(response.data.responseMessage == "Salvo com sucesso"){
-                    toastSucess()
+                    toastSucess("Extinção do processo salvo com sucesso.")
                 } else {
                     toastError()
                 }
@@ -26,8 +30,19 @@
             });
         }
 
+        /**
+         * Audiencia de conciliação e julgamento
+         */
+        $scope.conciliation = function(){
+            $state.go('conciliationHearing', { "item": $scope.exercise})
+        }
+
+        $scope.toChange = function(){
+            $state.go('correctionContestation', { "item": $scope.exercise})
+        };
+
         function toastError(){
-            toastr.error('', 'Não foi possível enviar a exercício.', {
+            toastr.error('', 'Não foi possível salvar.', {
                 "autoDismiss": false,
                 "positionClass": "toast-bottom-right",
                 "type": "error",
@@ -44,8 +59,8 @@
               });
         }
     
-        function toastSucess(){
-            toastr.success('', 'Exercício salvo com sucesso', {
+        function toastSucess(message){
+            toastr.success('', message, {
                 "autoDismiss": false,
                 "positionClass": "toast-bottom-right",
                 "type": "success",

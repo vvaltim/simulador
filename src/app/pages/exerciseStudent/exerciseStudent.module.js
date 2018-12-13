@@ -17,7 +17,7 @@
             controller: 'ListExerciseCtrl',
             title: 'Exercícios',
             sidebarMeta: {
-              icon: 'fas fa fa-bank',
+              icon: 'ion-ios-briefcase',
               order: 0,
             }
           });
